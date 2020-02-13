@@ -11,7 +11,9 @@ pool:
 
 steps:
 - bash: |
-    docker build -t deepspeed:latest -f Dockerfile .
-    docker tag deepspeed:latest deepspeed/deepspeed:latest
-    docker login --username deepspeed --password $TOKEN
-    docker push deepspeed/deepspeed:latest
+    echo "TESTVAR=$TESTVAR"
+
+#docker build -t deepspeed:latest -f Dockerfile .
+#    docker tag deepspeed:latest deepspeed/deepspeed:latest
+#    docker login --username deepspeed --password $TOKEN
+#    docker push deepspeed/deepspeed:latest
